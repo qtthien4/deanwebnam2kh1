@@ -1,0 +1,328 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+body {
+    margin: 0 100px;
+    color: white;
+    background-color: black;
+}
+
+.navbar {
+    width: 100%;
+    height: 55px;
+    background-color: black;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    display: flex;
+    margin: 20px 0;
+}
+
+.left-nav ul li a {
+    padding: 5px 25px;
+    color: white;
+    text-decoration: none;
+}
+
+.left-nav {
+    flex: 1;
+}
+
+.item-left-nav {
+    display: inline;
+    padding: 20px;
+    position: relative;
+}
+
+.item-left-nav a {
+    color: black;
+    text-decoration: none;
+}
+
+.item-left-nav:hover::after {
+    content: "";
+    border-radius: 50%;
+    background-color: #2DAFEF;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 80%;
+    left: 45%
+}
+
+#browse {
+    border: 2px solid;
+    box-sizing: border-box;
+    border-radius: 25px;
+    color: #2DAFEF;
+}
+
+.logo-web {
+    width: 120px;
+    height: 60px;
+    background-image: url(./image/music-box.png);
+    background-repeat: no-repeat;
+}
+
+.right-nav {
+    margin-top: 10px;
+    border-radius: 20px;
+}
+
+#search {
+    border: 1px solid;
+    border-radius: 20px;
+    padding: 7px 50px;
+}
+
+.icon-search::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f002";
+    padding-right: 3px;
+    font-weight: 900;
+    color: black;
+    position: absolute;
+    padding: 7px 8px;
+    color: white;
+}
+
+.search,
+.search:focus {
+    height: 31px;
+    padding-left: 30px;
+    border-radius: 20px;
+    outline: none;
+    background-color: #898B91;
+    color: white;
+    border: #898B91;
+}
+
+.search::placeholder {
+    color: white;
+}
+
+.icon-user {
+    font-size: 35px;
+    padding-left: 40px;
+}
+
+.right-nav {
+    display: flex;
+    padding: 0px;
+    margin: 10px 0;
+}
+
+#login {
+    padding: 10px 10px;
+    FONT-SIZE: 17px;
+}
+
+.cover {
+    width: 100%;
+    height: 900px;
+    background-image: url(./image/singer.jpg);
+    background-size: cover;
+    background-position: -150px -85px;
+}
+
+.cover .overlay {
+    height: 100%;
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.7598669809720763) 0%, rgba(0, 0, 0, 1) 100%);
+}
+
+.Content-info {
+    display: flex;
+}
+
+.logo-singger {
+    width: 200px;
+}
+
+.content-left {
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 55%;
+}
+
+.about {
+    display: flex;
+    font-weight: bold;
+    font-family: 'Lato', sans-serif;
+}
+
+.about>a {
+    padding-right: 13px;
+}
+
+.content-right {
+    width: 30%;
+    position: relative;
+}
+
+.content-right-item-first {
+    position: absolute;
+    top: 45%;
+    width: 114px;
+    border-radius: 25px;
+    border: 1px solid transparent;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    background: linear-gradient(90deg, rgba(45, 155, 239, 1) 20%, rgba(156, 46, 240, 1) 77%);
+}
+
+#icon-content-item-right {
+    position: absolute;
+    top: 49%;
+    font-size: 25px;
+    right: 40%;
+}
+
+.content-right-item-second,
+.content-right-item-third {
+    color: white;
+}
+
+#name-sing {
+    font-size: 45px;
+    flex: 0.8;
+    margin-top: 5px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.listmusic-list {
+    list-style-type: none;
+}
+
+.listmusic {
+    clear: both;
+}
+
+.list-item {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.img-list {
+    width: 40px;
+    height: 40px;
+}
+
+.number-list {
+    width: 3%;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.namesong-list {
+    width: 25%;
+    padding: 10px 20px;
+}
+
+.artist-list {
+    width: 15%;
+    padding: 10px 20px;
+}
+
+.album-list {
+    width: 35%;
+    padding: 10px 20px;
+}
+
+.time-list {
+    padding: 10px 20px;
+    width: 10%;
+    display: flex;
+}
+
+.play-stop i {
+    padding: 0 0 0 11px;
+}
+
+.listmusic-list {
+    margin: 0px 0px 0px -25px;
+}
+
+#show-more {
+    text-align: center;
+    border: solid 1px white;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 40px 0 0 40%;
+    width: 15%;
+}
+
+.title {
+    padding-bottom: 40px;
+}
+
+#title1 {
+    float: left;
+    font-weight: bold;
+    font-family: 'Lato', sans-serif;
+    font-size: 22px;
+}
+
+#title2 {
+    float: right;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+}
+
+#font-lato-bold-16 {
+    font-weight: bold;
+    font-family: 'Lato', sans-serif;
+    font-size: 22px;
+}
+
+#font-lato-regular-16 {
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+}
+
+#font-lato-regular-14 {
+    padding-top: 10px;
+    color: #99999F;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+}
+
+#namesong-released a {
+    display: flex;
+    flex-direction: row;
+}
+
+#picture {
+    width: 190px;
+    height: auto;
+}
+
+.picture-box {
+    margin-left: 9px;
+    margin-right: 9px;
+}
+
+.container {
+    clear: both;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+.container2 {
+    margin-top: 20px;
+    display: flex;
+}
+
+.content {
+    margin-top: 125PX;
+}
+
+#picture-radius {
+    width: 190px;
+    height: auto;
+    border-radius: 50%;
+}
