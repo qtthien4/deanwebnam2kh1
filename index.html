@@ -14,41 +14,55 @@
 
 <body>
     <div class="navbar" data-aos="slide-down" data-aos-duration="1000">
-        <div class="logo-web"></div>
-        <div class="left-nav">
-            <ul class="left-nav-item">
-                <li class="item-left-nav">
-                    <a href="#">Home</a>
-                </li>
-                <li class="item-left-nav">
-                    <a id="library" href="#">Library</a>
-                </li>
-                <li class="item-left-nav">
-                    <a id="browse" href="#">Browse</a>
-                </li>
-                <li class="item-left-nav">
-                    <a id="artists" href="#">Artists/TheIn</a>
-                </li>
-            </ul>
+        <div id="logo-web" class="logo-web"></div>
+        <div class="item-nav" id="item-nav">
+            <!-- <div class="logo-web"></div> -->
+            <div class="left-nav">
+                <ul class="left-nav-item" style="margin: 0px;">
+                    <li class="item-left-nav">
+                        <a href="#">Home</a>
+                    </li>
+                    <li class="item-left-nav">
+                        <a id="library" href="#">Library</a>
+                    </li>
+                    <li class="item-left-nav">
+                        <a id="browse" href="#">Browse</a>
+                    </li>
+                    <li class="item-left-nav">
+                        <a id="artists" href="#">Artists/TheIn</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="right-nav">
+                <a class="icon-search">
+                    <input type="text" name="search" class="search" placeholder="Search">
+                </a>
+                <a class="icon-user"><i class="far fa-user-circle fa-1x"></i></a>
+                <div id="login" class="login" onclick="clickMemuProfile()">
+                    <a href="#">Thiên Võ </a>
+                    <i class="fas fa-chevron-down"></i>
+                    <div class="dropdown-content">
+                        <a href="#">Hồ Sơ</a>
+                        <a href="#">Cập nhật</a>
+                        <a href="#">Đăng xuất</a>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="right-nav">
-            <a class="icon-search">
-                <input type="text" name="search" class="search" placeholder="Search">
-            </a>
-            <a class="icon-user"><i class="far fa-user-circle fa-1x"></i></a>
-            <a id="login">Thiên Võ  <i class="fas fa-chevron-down"></i></a>
+        <div class="menu-mobile" onclick="menuMobile()">
+            <i class="fa fa-bars"></i>
         </div>
     </div>
+
+
     <div class="cover" data-aos="fade" data-aos-delay="1000" data-aos-duration="700">
         <div class="overlay">
-
             <div>
                 <div class="Content-info">
-                    <div data-aos="fade" data-aos-delay="1000" data-aos-duration="700">
-                        <img src="./image/logo-singer.png" style="width: 200px; height: 200px; border-radius: 50%;" class="logo-singger">
+                    <div data-aos="fade" data-aos-delay="1000" data-aos-duration="700" class="logo-singger">
+                        <img src="./image/logo-singer.png" style="border-radius: 50%;">
                     </div>
                     <div class="content-left">
-                        <p>Artist</p>
                         <div>
                             <h1 id="name-sing">David Bowie</h1>
                         </div>
@@ -58,8 +72,11 @@
                             <a> FAN ALSO LIKE </a>
                         </div>
                     </div>
-                    <div class="content-right">
-                        <a href="#" class="content-right-item-first">SHUFFLE PLAY</a>
+                    <div class="content-right" id="content-right">
+                        <div>
+                            <a href="#" class="content-right-item-first">SHUFFLE PLAY</a>
+                        </div>
+
                         <div id="icon-content-item-right">
                             <a href="#" class="content-right-item-second"><i class="far fa-heart"></i></a>
                             <a href="#" class="content-right-item-third"><i class="fas fa-plus-circle"></i></a>
@@ -93,10 +110,9 @@
                             <span class="artist-list">	David Bowie</span>
                             <span class="album-list">	Heroes</span>
                             <span class="time-list">	6:11
-                                <div class="play-stop">
-                                    
-                                    <i class="fas fa-play play"></i>                                
-                                    <i class="fas fa-pause pause"></i>                   
+                                <div class="play-stop">                                    
+                                    <i class="fas fa-play play" id="play1" onclick="changeIcon()"></i>                                
+                                    <i class="fas fa-pause pause" id="pause1"></i>                   
                                     <i class="fas fa-stop stop"></i>
                                     <audio class="audio">
                                         <source src="./audio/cc.mp3" type="audio/mpeg">
@@ -183,7 +199,7 @@
                     </ul>
                 </div>
                 <div id="show-more">
-                    <a> SHOW 5 MORE </a>
+                    <a href="##"> SHOW 5 MORE </a>
                 </div>
             </div>
 
@@ -191,136 +207,170 @@
             <div class="content">
                 <div class="title">
                     <a id="title1">Albums </a>
-                    <a id="title2">View All </a>
+                    <a href="##" id="title2">View All </a>
                 </div>
                 <!-- hinh hang 1 -->
                 <div class="container">
                     <div class="picture-box">
-                        <div>
-                            <img src="./image/picture1.png" id="picture">
-                        </div>
-                        <div id="namesong-released">
-                            <a id="font-lato-regular-16">Dance</a>
-                            <a id="font-lato-regular-14">Released: 15/02/2019</a>
-                        </div>
+                        <a href="#">
+                            <div>
+                                <img src="./image/picture1.png" id="picture">
+                            </div>
+                            <div id="namesong-released">
+                                <a href="##" id="font-lato-regular-16">Dance</a>
+                                <a id="font-lato-regular-14">Released: 15/02/2019</a>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="picture-box">
+                        <a href="#">
+                            <div>
+                                <img src="./image/picture2.png" id="picture">
+                            </div>
+                            <div id="namesong-released">
+                                <a href="##" id="font-lato-regular-16">Glastonbury 2000 (Live)</a>
+                                <a id="font-lato-regular-14">Released: 30/11/2018</a>
+                            </div>
+                        </a>
+
                     </div>
 
                     <div class="picture-box">
-                        <div>
-                            <img src="./image/picture2.png" id="picture">
-                        </div>
-                        <div id="namesong-released">
-                            <a id="font-lato-regular-16">Glastonbury 2000 (Live)</a>
-                            <a id="font-lato-regular-14">Released: 30/11/2018</a>
-                        </div>
+                        <a href="#">
+                            <div>
+                                <img src="./image/picture3.png" id="picture">
+                            </div>
+                            <div id="namesong-released">
+                                <a href="##" id="font-lato-regular-16">Welcome To The Blackout</a>
+                                <a id="font-lato-regular-14">Released: 20/04/2018</a>
+                            </div>
+                        </a>
+
                     </div>
 
                     <div class="picture-box">
-                        <div>
-                            <img src="./image/picture3.png" id="picture">
-                        </div>
-                        <div id="namesong-released">
-                            <a id="font-lato-regular-16">Welcome To The Blackout</a>
-                            <a id="font-lato-regular-14">Released: 20/04/2018</a>
-                        </div>
+                        <a href="#">
+                            <div>
+                                <img src="./image/picture4.png" id="picture">
+                            </div>
+                            <div id="namesong-released">
+                                <a href="##" id="font-lato-regular-16">Stage (2017) (Live)</a>
+                                <a id="font-lato-regular-14">Released: 29/09/2017</a>
+                            </div>
+                        </a>
+
                     </div>
 
                     <div class="picture-box">
-                        <div>
-                            <img src="./image/picture4.png" id="picture">
-                        </div>
-                        <div id="namesong-released">
-                            <a id="font-lato-regular-16">Stage (2017) (Live)</a>
-                            <a id="font-lato-regular-14">Released: 29/09/2017</a>
-                        </div>
+                        <a href="#">
+                            <div>
+                                <img src="./image/picture5.png" id="picture">
+                            </div>
+                            <div id="namesong-released">
+                                <a href="##" id="font-lato-regular-16">Cracked Actor (Live) </a>
+                                <a id="font-lato-regular-14">Released: 22/04/2017</a>
+                            </div>
+                        </a>
+
                     </div>
 
                     <div class="picture-box">
-                        <div>
-                            <img src="./image/picture5.png" id="picture">
-                        </div>
-                        <div id="namesong-released">
-                            <a id="font-lato-regular-16">Cracked Actor (Live) </a>
-                            <a id="font-lato-regular-14">Released: 22/04/2017</a>
-                        </div>
-                    </div>
+                        <a href="#">
+                            <div>
+                                <img src="./image/picture6.png" id="picture">
+                            </div>
+                            <div id="namesong-released">
+                                <a href="##" id="font-lato-regular-16">Blackstar</a>
+                                <a id="font-lato-regular-14">Released: 08/01/2016</a>
+                            </div>
+                        </a>
 
-                    <div class="picture-box">
-                        <div>
-                            <img src="./image/picture6.png" id="picture">
-                        </div>
-                        <div id="namesong-released">
-                            <a id="font-lato-regular-16">Blackstar</a>
-                            <a id="font-lato-regular-14">Released: 08/01/2016</a>
-                        </div>
                     </div>
                 </div>
 
                 <!-- hinh hang 2 -->
                 <div class="container2">
                     <div class="picture-box">
-                        <div>
-                            <img src="./image/picture7.png" id="picture">
-                        </div>
-                        <div id="namesong-released">
-                            <a id="font-lato-regular-16">The Next Day</a>
-                            <a id="font-lato-regular-14">Released: 08/09/2013</a>
-                        </div>
+                        <a href="#">
+                            <div>
+                                <img src="./image/picture7.png" id="picture">
+                            </div>
+                            <div id="namesong-released">
+                                <a href="##" id="font-lato-regular-16">The Next Day</a>
+                                <a id="font-lato-regular-14">Released: 08/09/2013</a>
+                            </div>
+                        </a>
+
                     </div>
 
                     <div class="picture-box">
-                        <div>
-                            <img src="./image/picture8.png" id="picture">
-                        </div>
-                        <div id="namesong-released">
-                            <a id="font-lato-regular-16">A Reality Tour</a>
-                            <a id="font-lato-regular-14">Released: 22/01/2010</a>
-                        </div>
+                        <a href="#">
+                            <div>
+                                <img src="./image/picture8.png" id="picture">
+                            </div>
+                            <div id="namesong-released">
+                                <a href="##" id="font-lato-regular-16">A Reality Tour</a>
+                                <a id="font-lato-regular-14">Released: 22/01/2010</a>
+                            </div>
+                        </a>
+
                     </div>
 
                     <div class="picture-box">
-                        <div>
-                            <img src="./image/picture9.png" id="picture">
-                        </div>
-                        <div id="namesong-released">
-                            <a id="font-lato-regular-16">VH1 Storytellers (Live)</a>
-                            <a id="font-lato-regular-14">Released: 06/07/2009</a>
-                        </div>
+                        <a href="#">
+                            <div>
+                                <img src="./image/picture9.png" id="picture">
+                            </div>
+                            <div id="namesong-released">
+                                <a href="##" id="font-lato-regular-16">VH1 Storytellers (Live)</a>
+                                <a id="font-lato-regular-14">Released: 06/07/2009</a>
+                            </div>
+                        </a>
+
                     </div>
 
                     <div class="picture-box">
-                        <div>
-                            <img src="./image/picture10.png" id="picture">
-                        </div>
-                        <div id="namesong-released">
-                            <a id="font-lato-regular-16">Reality</a>
-                            <a id="font-lato-regular-14">Released: 16/09/2003</a>
-                        </div>
+                        <a href="#">
+                            <div>
+                                <img src="./image/picture10.png" id="picture">
+                            </div>
+                            <div id="namesong-released">
+                                <a href="##" id="font-lato-regular-16">Reality</a>
+                                <a id="font-lato-regular-14">Released: 16/09/2003</a>
+                            </div>
+                        </a>
+
                     </div>
 
                     <div class="picture-box">
-                        <div>
-                            <img src="./image/picture11.png" id="picture">
-                        </div>
-                        <div id="namesong-released">
-                            <a id="font-lato-regular-16">Heathen</a>
-                            <a id="font-lato-regular-14">Released: 11/06/2002</a>
-                        </div>
+                        <a href="#">
+                            <div>
+                                <img src="./image/picture11.png" id="picture">
+                            </div>
+                            <div id="namesong-released">
+                                <a href="##" id="font-lato-regular-16">Heathen</a>
+                                <a id="font-lato-regular-14">Released: 11/06/2002</a>
+                            </div>
+                        </a>
+
                     </div>
 
                     <div class="picture-box">
-                        <div>
-                            <img src="./image/picture12.png" id="picture">
-                        </div>
-                        <div id="namesong-released">
-                            <a id="font-lato-regular-16">Hours</a>
-                            <a id="font-lato-regular-14">Released: 29/09/1999</a>
-                        </div>
+                        <a href="#">
+                            <div>
+                                <img src="./image/picture12.png" id="picture">
+                            </div>
+                            <div id="namesong-released">
+                                <a href="##" id="font-lato-regular-16">Hours</a>
+                                <a id="font-lato-regular-14">Released: 29/09/1999</a>
+                            </div>
+                        </a>
+
                     </div>
                 </div>
                 <!-- show more -->
                 <div id="show-more">
-                    <a> SHOW 5 MORE </a>
+                    <a href="##"> SHOW 5 MORE </a>
                 </div>
             </div>
 
@@ -328,136 +378,172 @@
             <div class="content">
                 <div class="title">
                     <a id="title1">Singles & EPs </a>
-                    <a id="title2">View All </a>
+                    <a href="##" id="title2">View All </a>
                 </div>
                 <!-- hinh hang 1 -->
                 <div class="container">
                     <div class="picture-box">
-                        <div>
-                            <img src="./image/picture13.png" id="picture">
-                        </div>
-                        <div id="namesong-released">
-                            <a id="font-lato-regular-16">Life On Mars? (2016 Mix)</a>
-                            <a id="font-lato-regular-14">Released: 06/10/2016</a>
-                        </div>
+                        <a href="#">
+                            <div>
+                                <img src="./image/picture13.png" id="picture">
+                            </div>
+                            <div id="namesong-released">
+                                <a href="##" id="font-lato-regular-16">Life On Mars? (2016 Mix)</a>
+                                <a id="font-lato-regular-14">Released: 06/10/2016</a>
+                            </div>
+                        </a>
+
                     </div>
 
                     <div class="picture-box">
-                        <div>
-                            <img src="./image/picture14.png" id="picture">
-                        </div>
-                        <div id="namesong-released">
-                            <a id="font-lato-regular-16">TVC15 (2010 Harry Masl...</a>
-                            <a id="font-lato-regular-14">Released: 01/09/2016</a>
-                        </div>
+                        <a href="#">
+                            <div>
+                                <img src="./image/picture14.png" id="picture">
+                            </div>
+                            <div id="namesong-released">
+                                <a href="##" id="font-lato-regular-16">TVC15 (2010 Harry Masl...</a>
+                                <a id="font-lato-regular-14">Released: 01/09/2016</a>
+                            </div>
+                        </a>
+
                     </div>
 
                     <div class="picture-box">
-                        <div>
-                            <img src="./image/picture15.png" id="picture">
-                        </div>
-                        <div id="namesong-released">
-                            <a id="font-lato-regular-16">Rock 'N' Roll With Me</a>
-                            <a id="font-lato-regular-14">Released: 27/07/2016</a>
-                        </div>
+                        <a href="#">
+                            <div>
+                                <img src="./image/picture15.png" id="picture">
+                            </div>
+                            <div id="namesong-released">
+                                <a href="##" id="font-lato-regular-16">Rock 'N' Roll With Me</a>
+                                <a id="font-lato-regular-14">Released: 27/07/2016</a>
+                            </div>
+                        </a>
+
                     </div>
 
                     <div class="picture-box">
-                        <div>
-                            <img src="./image/picture16.png" id="picture">
-                        </div>
-                        <div id="namesong-released">
-                            <a id="font-lato-regular-16">Sue (Or In A Season Of C...</a>
-                            <a id="font-lato-regular-14">Released: 14/11/2014</a>
-                        </div>
+                        <a href="#">
+                            <div>
+                                <img src="./image/picture16.png" id="picture">
+                            </div>
+                            <div id="namesong-released">
+                                <a href="##" id="font-lato-regular-16">Sue (Or In A Season Of C...</a>
+                                <a id="font-lato-regular-14">Released: 14/11/2014</a>
+                            </div>
+                        </a>
+
                     </div>
 
                     <div class="picture-box">
-                        <div>
-                            <img src="./image/picture17.png" id="picture">
-                        </div>
-                        <div id="namesong-released">
-                            <a id="font-lato-regular-16">Tis A Pity She Was A Whore</a>
-                            <a id="font-lato-regular-14">Released: 10/11/2014</a>
-                        </div>
+                        <a href="#">
+                            <div>
+                                <img src="./image/picture17.png" id="picture">
+                            </div>
+                            <div id="namesong-released">
+                                <a href="##" id="font-lato-regular-16">Tis A Pity She Was A Whore</a>
+                                <a id="font-lato-regular-14">Released: 10/11/2014</a>
+                            </div>
+                        </a>
+
                     </div>
 
                     <div class="picture-box">
-                        <div>
-                            <img src="./image/picture18.png" id="picture">
-                        </div>
-                        <div id="namesong-released">
-                            <a id="font-lato-regular-16">The Next Day Extra - EP</a>
-                            <a id="font-lato-regular-14">Released: 01/11/2013</a>
-                        </div>
+                        <a href="#">
+                            <div>
+                                <img src="./image/picture18.png" id="picture">
+                            </div>
+                            <div id="namesong-released">
+                                <a href="##" id="font-lato-regular-16">The Next Day Extra - EP</a>
+                                <a id="font-lato-regular-14">Released: 01/11/2013</a>
+                            </div>
+                        </a>
+
                     </div>
                 </div>
 
                 <!-- hinh hang 2 -->
                 <div class="container2">
                     <div class="picture-box">
-                        <div>
-                            <img src="./image/picture19.png" id="picture">
-                        </div>
-                        <div id="namesong-released">
-                            <a id="font-lato-regular-16">Let's Dance (Nile Rodgers</a>
-                            <a id="font-lato-regular-14">Released: 06/10/2016</a>
-                        </div>
+                        <a href="#">
+                            <div>
+                                <img src="./image/picture19.png" id="picture">
+                            </div>
+                            <div id="namesong-released">
+                                <a href="##" id="font-lato-regular-16">Let's Dance (Nile Rodgers</a>
+                                <a id="font-lato-regular-14">Released: 06/10/2016</a>
+                            </div>
+                        </a>
+
                     </div>
 
                     <div class="picture-box">
-                        <div>
-                            <img src="./image/picture20.png" id="picture">
-                        </div>
-                        <div id="namesong-released">
-                            <a id="font-lato-regular-16">Beat Of Your Drum (2018)</a>
-                            <a id="font-lato-regular-14">Released: 07/09/2018</a>
-                        </div>
+                        <a href="#">
+                            <div>
+                                <img src="./image/picture20.png" id="picture">
+                            </div>
+                            <div id="namesong-released">
+                                <a href="##" id="font-lato-regular-16">Beat Of Your Drum (2018)</a>
+                                <a id="font-lato-regular-14">Released: 07/09/2018</a>
+                            </div>
+                        </a>
+
                     </div>
 
                     <div class="picture-box">
-                        <div>
-                            <img src="./image/picture6.png" id="picture">
-                        </div>
-                        <div id="namesong-released">
-                            <a id="font-lato-regular-16">Zeroes (2018, Radio Edit)</a>
-                            <a id="font-lato-regular-14">Released: 19/07/2018</a>
-                        </div>
+                        <a href="#">
+                            <div>
+                                <img src="./image/picture6.png" id="picture">
+                            </div>
+                            <div id="namesong-released">
+                                <a href="##" id="font-lato-regular-16">Zeroes (2018, Radio Edit)</a>
+                                <a id="font-lato-regular-14">Released: 19/07/2018</a>
+                            </div>
+                        </a>
+
                     </div>
 
                     <div class="picture-box">
-                        <div>
-                            <img src="./image/picture21.png" id="picture">
-                        </div>
-                        <div id="namesong-released">
-                            <a id="font-lato-regular-16">Let's Dance (Demo)</a>
-                            <a id="font-lato-regular-14">Released: 07/01/2018</a>
-                        </div>
+                        <a href="#">
+                            <div>
+                                <img src="./image/picture21.png" id="picture">
+                            </div>
+                            <div id="namesong-released">
+                                <a href="##" id="font-lato-regular-16">Let's Dance (Demo)</a>
+                                <a id="font-lato-regular-14">Released: 07/01/2018</a>
+                            </div>
+                        </a>
+
                     </div>
 
                     <div class="picture-box">
-                        <div>
-                            <img src="./image/picture22.png" id="picture">
-                        </div>
-                        <div id="namesong-released">
-                            <a id="font-lato-regular-16">Rebel Rebel (Live)</a>
-                            <a id="font-lato-regular-14">Released: 02/06/2017</a>
-                        </div>
+                        <a href="#">
+                            <div>
+                                <img src="./image/picture22.png" id="picture">
+                            </div>
+                            <div id="namesong-released">
+                                <a href="##" id="font-lato-regular-16">Rebel Rebel (Live)</a>
+                                <a id="font-lato-regular-14">Released: 02/06/2017</a>
+                            </div>
+                        </a>
+
                     </div>
 
                     <div class="picture-box">
-                        <div>
-                            <img src="./image/picture23.png" id="picture">
-                        </div>
-                        <div id="namesong-released">
-                            <a id="font-lato-regular-16">No Plan - EP</a>
-                            <a id="font-lato-regular-14">Released: 07/01/2017</a>
-                        </div>
+                        <a href="#">
+                            <div>
+                                <img src="./image/picture23.png" id="picture">
+                            </div>
+                            <div id="namesong-released">
+                                <a href="##" id="font-lato-regular-16">No Plan - EP</a>
+                                <a id="font-lato-regular-14">Released: 07/01/2017</a>
+                            </div>
+                        </a>
+
                     </div>
                 </div>
                 <!-- show more -->
                 <div id="show-more">
-                    <a> SHOW 5 MORE </a>
+                    <a href="##"> SHOW 5 MORE </a>
                 </div>
             </div>
 
@@ -465,73 +551,91 @@
             <div class="content">
                 <div class="title">
                     <a id="title1">Appears in these playlists</a>
-                    <a id="title2">View All </a>
+                    <a href="##" id="title2">View All </a>
                 </div>
                 <!-- hinh hang 1 -->
                 <div class="container">
                     <div class="picture-box">
-                        <div>
-                            <img src="./image/picture24.png" id="picture">
-                        </div>
-                        <div id="namesong-released">
-                            <a id="font-lato-regular-16">80s Symphonic</a>
-                            <a id="font-lato-regular-14">Released: 09/11/2018</a>
-                        </div>
+                        <a href="#">
+                            <div>
+                                <img src="./image/picture24.png" id="picture">
+                            </div>
+                            <div id="namesong-released">
+                                <a href="##" id="font-lato-regular-16">80s Symphonic</a>
+                                <a id="font-lato-regular-14">Released: 09/11/2018</a>
+                            </div>
+                        </a>
+
                     </div>
 
                     <div class="picture-box">
-                        <div>
-                            <img src="./image/picture25.png" id="picture">
-                        </div>
-                        <div id="namesong-released">
-                            <a id="font-lato-regular-16">Bohemian Rhapsody</a>
-                            <a id="font-lato-regular-14">Released: 09/11/2018</a>
-                        </div>
+                        <a href="#">
+                            <div>
+                                <img src="./image/picture25.png" id="picture">
+                            </div>
+                            <div id="namesong-released">
+                                <a href="##" id="font-lato-regular-16">Bohemian Rhapsody</a>
+                                <a id="font-lato-regular-14">Released: 09/11/2018</a>
+                            </div>
+                        </a>
+
                     </div>
 
                     <div class="picture-box">
-                        <div>
-                            <img src="./image/picture26.png" id="picture">
-                        </div>
-                        <div id="namesong-released">
-                            <a id="font-lato-regular-16">Piano Odyssey</a>
-                            <a id="font-lato-regular-14">Released: 12/10/2018</a>
-                        </div>
+                        <a href="#">
+                            <div>
+                                <img src="./image/picture26.png" id="picture">
+                            </div>
+                            <div id="namesong-released">
+                                <a href="##" id="font-lato-regular-16">Piano Odyssey</a>
+                                <a id="font-lato-regular-14">Released: 12/10/2018</a>
+                            </div>
+                        </a>
+
                     </div>
 
                     <div class="picture-box">
-                        <div>
-                            <img src="./image/picture27.png" id="picture">
-                        </div>
-                        <div id="namesong-released">
-                            <a id="font-lato-regular-16">Live Aid (Live, 13th July 1985)</a>
-                            <a id="font-lato-regular-14">Released: 07/09/2018</a>
-                        </div>
+                        <a href="#">
+                            <div>
+                                <img src="./image/picture27.png" id="picture">
+                            </div>
+                            <div id="namesong-released">
+                                <a href="##" id="font-lato-regular-16">Live Aid (Live, 13th July 1985)</a>
+                                <a id="font-lato-regular-14">Released: 07/09/2018</a>
+                            </div>
+                        </a>
+
                     </div>
 
                     <div class="picture-box">
-                        <div>
-                            <img src="./image/picture28.png" id="picture">
-                        </div>
-                        <div id="namesong-released">
-                            <a id="font-lato-regular-16">Pub Songs</a>
-                            <a id="font-lato-regular-14">Released: 31/08/2018</a>
-                        </div>
+                        <a href="#">
+                            <div>
+                                <img src="./image/picture28.png" id="picture">
+                            </div>
+                            <div id="namesong-released">
+                                <a href="##" id="font-lato-regular-16">Pub Songs</a>
+                                <a id="font-lato-regular-14">Released: 31/08/2018</a>
+                            </div>
+                        </a>
+
                     </div>
 
                     <div class="picture-box">
-                        <div>
-                            <img src="./image/picture29.png" id="picture">
-                        </div>
-                        <div id="namesong-released">
-                            <a id="font-lato-regular-16">Paradise: The Sound Of Ivor</a>
-                            <a id="font-lato-regular-14">Released: 30/08/2018</a>
-                        </div>
+                        <a href="#">
+                            <div>
+                                <img src="./image/picture29.png" id="picture">
+                            </div>
+                            <div id="namesong-released">
+                                <a href="##" id="font-lato-regular-16">Paradise: The Sound Of Ivor</a>
+                                <a id="font-lato-regular-14">Released: 30/08/2018</a>
+                            </div>
+                        </a>
+
                     </div>
                 </div>
                 <!-- show more -->
                 <div id="show-more">
-                    <a> SHOW 5 MORE </a>
+                    <a href="##"> SHOW 5 MORE </a>
                 </div>
             </div>
 
@@ -539,117 +643,96 @@
             <div class="content">
                 <div class="title">
                     <a id="title1">Fans Also Like</a>
-                    <a style="color: white;float: right; "><i class="fas fa-chevron-right"></i> </a>
+                    <a href="#" style="color: white;float: right; margin-right: 10px;"><i class="fas fa-chevron-right"></i> </a>
                 </div>
                 <!-- hinh hang 1 -->
                 <div class="container">
                     <div class="picture-box">
-                        <div>
-                            <img src="./image/picture30.png" id="picture-radius">
-                        </div>
-                        <div id="namesong-released">
-                            <a id="font-lato-regular-16">Lou Reed</a>
-                            <a id="font-lato-regular-14"> <i class="fas fa-heart"></i> 429,222</a>
-                        </div>
+                        <a href="#">
+                            <div>
+                                <img src="./image/picture30.png" id="picture-radius">
+                            </div>
+                            <div id="namesong-released">
+                                <a href="##" id="font-lato-regular-16">Lou Reed</a>
+                                <a id="font-lato-regular-14"> <i class="fas fa-heart"></i> 429,222</a>
+                            </div>
+                        </a>
+
                     </div>
 
                     <div class="picture-box">
-                        <div>
-                            <img src="./image/picture31.png" id="picture-radius">
-                        </div>
-                        <div id="namesong-released">
-                            <a id="font-lato-regular-16">Talking Heads</a>
-                            <a id="font-lato-regular-14"> <i class="fas fa-heart"></i> 189,152</a>
-                        </div>
+                        <a href="#">
+                            <div>
+                                <img src="./image/picture31.png" id="picture-radius">
+                            </div>
+                            <div id="namesong-released">
+                                <a href="##" id="font-lato-regular-16">Talking Heads</a>
+                                <a id="font-lato-regular-14"> <i class="fas fa-heart"></i> 189,152</a>
+                            </div>
+                        </a>
+
                     </div>
 
                     <div class="picture-box">
-                        <div>
-                            <img src="./image/picture32.png" id="picture-radius">
-                        </div>
-                        <div id="namesong-released">
-                            <a id="font-lato-regular-16">T. Rex</a>
-                            <a id="font-lato-regular-14"> <i class="fas fa-heart"></i> 53,145</a>
-                        </div>
+                        <a href="#">
+                            <div>
+                                <img src="./image/picture32.png" id="picture-radius">
+                            </div>
+                            <div id="namesong-released">
+                                <a href="##" id="font-lato-regular-16">T. Rex</a>
+                                <a id="font-lato-regular-14"> <i class="fas fa-heart"></i> 53,145</a>
+                            </div>
+                        </a>
+
                     </div>
 
                     <div class="picture-box">
-                        <div>
-                            <img src="./image/picture33.png" id="picture-radius">
-                        </div>
-                        <div id="namesong-released">
-                            <a id="font-lato-regular-16">Iggy Pop</a>
-                            <a id="font-lato-regular-14"> <i class="fas fa-heart"></i> 471,145</a>
-                        </div>
+                        <a href="#">
+                            <div>
+                                <img src="./image/picture33.png" id="picture-radius">
+                            </div>
+                            <div id="namesong-released">
+                                <a href="##" id="font-lato-regular-16">Iggy Pop</a>
+                                <a id="font-lato-regular-14"> <i class="fas fa-heart"></i> 471,145</a>
+                            </div>
+                        </a>
+
                     </div>
 
                     <div class="picture-box">
-                        <div>
-                            <img src="./image/picture34.png" id="picture-radius">
-                        </div>
-                        <div id="namesong-released">
-                            <a id="font-lato-regular-16">Queen</a>
-                            <a id="font-lato-regular-14"> <i class="fas fa-heart"></i> 147,423</a>
-                        </div>
+                        <a href="#">
+                            <div>
+                                <img src="./image/picture34.png" id="picture-radius">
+                            </div>
+                            <div id="namesong-released">
+                                <a href="##" id="font-lato-regular-16">Queen</a>
+                                <a id="font-lato-regular-14"> <i class="fas fa-heart"></i> 147,423</a>
+                            </div>
+                        </a>
+
                     </div>
 
                     <div class="picture-box">
-                        <div>
-                            <img src="./image/picture35.png" id="picture-radius">
-                        </div>
-                        <div id="namesong-released">
-                            <a id="font-lato-regular-16">The Velvet Underground</a>
-                            <a id="font-lato-regular-14"> <i class="fas fa-heart"></i> 948,117</a>
-                        </div>
+                        <a href="#">
+                            <div>
+                                <img src="./image/picture35.png" id="picture-radius">
+                            </div>
+                            <div id="namesong-released">
+                                <a href="##" id="font-lato-regular-16">The Velvet Underground</a>
+                                <a id="font-lato-regular-14"> <i class="fas fa-heart"></i> 948,117</a>
+                            </div>
+                        </a>
+
                     </div>
                 </div>
                 <!-- show more -->
                 <div id="show-more">
-                    <a> SHOW 5 MORE </a>
+                    <a href="##"> SHOW 5 MORE </a>
                 </div>
             </div>
         </div>
     </div>
-    <script>
-        function tim() {
-            var input = document.getElementById('myinput').value;
-            var filter = input.toUpperCase();
-            console.log(filter);
-            var ul = document.getElementsByClassName('listmusic-list');
-            var name = document.getElementsByClassName('namesong-list');
-            for (var i = 0; i < ul.length; i++) {
-
-                if (name[i].textContent.toUpperCase().indexOf(filter) > -1) {
-                    ul[i].style.display = "";
-                } else {
-                    ul[i].style.display = "none";
-                }
-            }
-        }
-        var pause = document.getElementsByClassName('pause');
-        var play = document.getElementsByClassName('play');
-        var audio = document.getElementsByClassName('audio');
-        var audio1 = document.getElementsByClassName('audio1');
-        var count = 0;
-        var stop = document.getElementsByClassName('stop');
-        var play_stop = document.getElementsByClassName('play-stop');
-
-        for (let i = 0; i < audio.length; i++) {
-            play[i].addEventListener('click', function() {
-                audio[i].play();
-            });
-            stop[i].addEventListener('click', function() {
-                audio[i].pause();
-                audio[i].currentTime = 0;
-            });
-            pause[i].addEventListener('click', function() {
-                audio[i].pause();
-            });
-        }
-
-
-        AOS.init();
-    </script>
+    <script src="./index.js"></script>
 </body>
 
 </html>
